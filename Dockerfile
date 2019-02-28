@@ -1,6 +1,7 @@
 FROM golang:1.11.5-alpine as go
 
 RUN mkdir -p ./build \
+    && ls -al \
     && go build -v -o ./build/main \
     && cp -fr ./views ./build \
     && cp -fr ./static ./build \
