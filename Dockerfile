@@ -1,7 +1,8 @@
 FROM golang:1.11.5-alpine as go
 WORKDIR /go/src/cwj.com/start_ci_test
 COPY ./ /go/src/cwj.com/start_ci_test
-RUN mkdir -p build \
+RUN go get github.com/astaxie/beego \
+    && mkdir -p build \
     && go build -v -o build/main \
     && cp -fr ./views build \
     && cp -fr ./static build \
