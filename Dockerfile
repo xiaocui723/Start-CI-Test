@@ -4,7 +4,7 @@ RUN mkdir -p ./build \
     && go build -v -o ./build/main \
     && cp -fr ./views ./build \
     && cp -fr ./static ./build \
-    && cp -fr ./conf ./build \
+    && cp -fr ./conf ./build
 
 
 FROM nginx:1.15.8-alpine
