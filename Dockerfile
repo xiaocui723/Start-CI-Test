@@ -1,7 +1,7 @@
 FROM golang:1.11.5-alpine as go
 
 RUN mkdir -p build \
-    && ls -al \
+    && find / -name Start-CI-Test \
     && go build -v -o build/main \
     && cp -fr ./views build \
     && cp -fr ./static build \
