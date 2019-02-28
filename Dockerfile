@@ -13,4 +13,4 @@ FROM nginx:1.15.8-alpine
 
 RUN mkdir -p /app
 COPY --from=go /go/src/cwj.com/start_ci_test/build /app
-CMD ["sh", "-c", "/app/main"]
+CMD ["sh", "-c", "/app/build/main"]
