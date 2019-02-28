@@ -13,5 +13,5 @@ FROM nginx:1.15.8-alpine
 WORKDIR /app
 RUN mkdir -p /app
 COPY --from=go /go/src/cwj.com/start_ci_test/build /app
-CMD ["sh", "-c", "ls -al \
+CMD ["bash", "-c", "ls -al \
     && ./main"]
