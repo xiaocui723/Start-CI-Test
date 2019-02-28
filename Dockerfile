@@ -1,4 +1,4 @@
-FROM golang:1.11.5-alpine as go
+FROM golang:1.11.5 as go
 WORKDIR /go/src/cwj.com/start_ci_test
 COPY ./ /go/src/cwj.com/start_ci_test
 RUN go get github.com/astaxie/beego \
