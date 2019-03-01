@@ -8,10 +8,8 @@ RUN go get github.com/astaxie/beego \
     && cp -fr ./static build \
     && cp -fr ./conf build
 
-
-FROM nginx:1.15.8-alpine
+FROM nginx:1.15.8
 WORKDIR /app
 RUN mkdir -p /app
 COPY --from=go /go/src/cwj.com/start_ci_test/build /app
-CMD ["bash", "-c", "ls -al \
-    && ./main"]
+CMD ["sh", "-c", "./main"]
